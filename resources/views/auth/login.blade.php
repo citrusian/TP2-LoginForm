@@ -65,5 +65,13 @@
 {{--                <input type="submit" value="{{ __('Log in') }}">--}}
 {{--            </form>--}}
         </form>
+        <script>
+            var exist = '{{Session::has('blocked')}}';
+            if(exist){
+                alert("Too many Login attempt, disabled for 30s");
+            }
+        </script>
+
+
     </x-authentication-card>
 </x-guest-layout>

@@ -15,8 +15,8 @@ use App\Http\Controllers\A1HeaderInvokeProfile;
 */
 
 Route::get('/', function () {
-//    return view('welcome');
-    return redirect('/login');
+    return view('welcome');
+//    return redirect('/login');
 });
 
 
@@ -28,9 +28,9 @@ Route::middleware([
         Route::get('/dashboard', function () {
             return view('dashboard');
         })->name('dashboard');
-        Route::get('/', function () {
-            return view('dashboard');
-        })->name('dashboard');
+//        Route::get('/', function () {
+//            return view('dashboard');
+//        })->name('dashboard');
 
 //    Route::get('user/profile', function () {
 //        return view('profile/information');

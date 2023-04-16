@@ -51,10 +51,12 @@ class FortifyServiceProvider extends ServiceProvider
             );
 
             if (! $executed) {
-                return response()
-                    ->json(
-                         'Too many error attempt, Login disabled for 30s',
-                    );
+//                return response()
+//                    ->json(
+//                         'Too many error attempt, Login disabled for 30s',
+//                    );
+//                $request->session()->flash('flash.bannerStyle', 'success');
+                return redirect()->back()->with('blocked','blocked' );
             }
 
 
